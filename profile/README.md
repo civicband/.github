@@ -35,16 +35,4 @@ Grab a cup of coffee (or your beverage of choice), since processing years’ wor
 
 We’re continuing to upload more data, and build out the tooling to be able to data from other sources (such as meeting minutes from School Boards, which typically use a different document management system). We encourage anyone interested in supporting our work to check out our [Task Tracker](https://github.com/orgs/civicband/projects/1/views/1) or [become an Advocate via our mailing list](https://buttondown.com/civicband/archive/will-you-be-an-advocate-for-civicband/).
 
-2. Let's talk about that process in more detail, by going through a hypothetical, say "Getting the data for Alameda, CA"  
-* Start by looking at the Alameda, CA city government website, and figure out if there's some system they're using to store all meeting minutes.  
-* There is\! I'm not going to name it here, because while this data is public data, the systems that cities contract with to run it aren't. They could make my life way more difficult if they chose. They could also make my life easier\! If you run one of these systems, email hello@civic.band.  
-* Fetch all the PDFs, store them in folders organized by "pdfs/MeetingName/Date", eg "pdfs/CityCouncil/2020-04-20.pdf". We do this so the directory structure itself is metadata that we can use in later processing.  
-* Run all the PDFs through a program that splits each PDF into a folder of images by page number (for example,"images/CityCouncil/2020-04-20/1.png").  We do this so that the OCR jobs can be parallelized easier, and it matches how the data is eventually stored.  
-* Upload the images to a CDN, so that they can be displayed alongside the text result.  
-* Run Tesseract on all the page images, saving the output as text files, eg "txt/CityCouncil/2020-04-20/1.txt"  
-* Load all the text files as rows into a SQLite DB, with search turned on.  
-* Deploy that DB to a docker container running Datasette on the production server.
-
-Each of these steps represents many hours of work and trial and error, not to mention the scrapers I have written for various storage systems. I may eventually open-source parts of this, but am pretty unlikely to open-source the whole thing. That said, if you want to work on this, or work on the data, please reach out to hello@civic.band.
-
 [^1]:  CivicBand’s scrapers are currently closed-source. 
