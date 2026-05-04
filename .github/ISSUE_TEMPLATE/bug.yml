@@ -1,0 +1,35 @@
+name: 🐛 Bug
+description: It's a bug
+
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a bug!
+
+        **Please provide as much information as you have available. The more information we have, the better we will be able to help resolve the issue.**
+
+        ## Bug details
+
+  - type: dropdown
+    id: new
+    attributes:
+      label: Is this for a new site?
+      options:
+        - New site
+        - Existing site
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: Provide a description of the bug.
+      value: |
+        <!-- A clear and concise description of the problem behavior, including what is happening, and what you expected to happen. -->
+    validations:
+      required: true
+
+

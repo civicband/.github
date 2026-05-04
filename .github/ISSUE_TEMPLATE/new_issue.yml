@@ -1,0 +1,40 @@
+name: ✅ New Issue
+description: A feature or site request
+
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to submit an issue!
+
+        **Please provide as much information as you have available. The more information we have, the better.**
+
+        If this is for adding a new site, select new site, then fill in the details for how to get the PDFs off that site.
+
+        ## Details
+
+  - type: dropdown
+    id: new
+    attributes:
+      label: Is this for a new site?
+      options:
+        - New site
+        - Existing site
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the feature or new site you'd like to add
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to add this site
+      description: Provide the steps for accessing the PDFs and metadata
+    validations:
+      required: false
