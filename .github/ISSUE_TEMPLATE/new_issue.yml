@@ -22,7 +22,7 @@ body:
         - New site
         - Existing site
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: description
