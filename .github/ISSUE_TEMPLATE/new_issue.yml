@@ -1,5 +1,6 @@
-name: ✅ New Issue
-description: A feature or site request
+name: ✅ Feature request
+description: A request for a new feature or improvement
+type: Feature
 
 body:
 
@@ -10,31 +11,21 @@ body:
 
         **Please provide as much information as you have available. The more information we have, the better.**
 
-        If this is for adding a new site, select new site, then fill in the details for how to get the PDFs off that site.
-
         ## Details
-
-  - type: dropdown
-    id: new
-    attributes:
-      label: Is this for a new site?
-      options:
-        - New site
-        - Existing site
-    validations:
-      required: true
 
   - type: textarea
     id: description
     attributes:
-      label: Describe the feature or new site you'd like to add
+      label: Describe the feature you'd like to request
     validations:
       required: true
 
-  - type: textarea
-    id: reproduce
+  - type: checkboxes
+    id: checklist
     attributes:
-      label: Steps to add this site
-      description: Provide the steps for accessing the PDFs and metadata
-    validations:
-      required: false
+      label: Checklist for new issues
+      options:
+        - label: I will abide by the CivicBand [Code of Conduct](https://github.com/civicband/.github/blob/main/CODE_OF_CONDUCT.md)
+          required: true
+        - label: I have searched the existing issues and believe this is not a duplicate
+          required: true

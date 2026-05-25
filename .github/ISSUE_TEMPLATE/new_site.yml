@@ -1,0 +1,84 @@
+name: 🏙️ New municipality
+description: Suggest a new city, county, etc site to add to the list of municipalities
+labels: ["needs-triage"]
+type: Feature
+
+body:
+  - type: markdown
+    attributes:
+      Thank you for taking the time to submit a new municipality! We'll happily
+      take site suggestions on any repo, but you'll get the fastest reponse by 
+      filing against [clerk-fetchers](https://github.com/civicband/clerk-fetchers).
+
+      Please title your issue with the name of the municipality, followed by the 
+      state or province, followed by the country if not the US. For example, 
+      "Alameda, CA" or "Toronto, ON, Canada".
+  
+  - type: input
+    id: subdomain
+    attributes:
+      label: Subdomain
+      description: Subdomain is everything before the .civic.band in the url. Normally {municipality-name}.{state code}, with an optional .{country}. For example, alameda.ca, london.on.canada
+    validations:
+      required: true
+  
+  - type: input
+    id: kind
+    attributes:
+      label: Kind of municipality
+      description: Is it a city, county, town, fire_department? Use your best judgement here, there isn't an official standard we follow yet
+    validations:
+      required: true
+  
+  - type: input
+    id: start_year
+    attributes:
+      label: Start Year
+      description: When the municipal site says the earliest doc is from
+    validations:
+      required: false
+
+  - type: input
+    id: lat_lon
+    attributes:
+      label: Latitude,Longitude
+      description: We need the latitude and longitude, preferably in the format lat,lon. You can use https://nominatim.openstreetmap.org/ to get this for regional municipal entities
+    validations:
+      required: true
+  
+  - type: input
+    id: fetcher
+    attributes:
+      label: Fetcher
+      description: Is it a scraper we already know how to use? check out the [FAQ](https://github.com/civicband/clerk-fetchers/blob/main/FAQ.md) or the [Chrome Extension](https://github.com/civicband/clerk-fetchers/blob/main/utilities/Chrome%20Extension/readme-chrome-extension.md) to learn more.
+      placeholder: Scraper name, "custom" or "I don't know"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: The URL of the site where docs are hosted
+    validations:
+      required: true
+  
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Any other information you think would be helpful for us to know about this municipality or site
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist for new issues
+      options:
+        - label: I will abide by the CivicBand [Code of Conduct](https://github.com/civicband/.github/blob/main/CODE_OF_CONDUCT.md)
+          required: true
+        - label: I have searched the existing issues and believe this is not a duplicate
+          required: true
+
+

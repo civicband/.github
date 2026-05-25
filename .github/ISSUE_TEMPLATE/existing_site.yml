@@ -1,24 +1,28 @@
-name: 🐛 Bug
-description: It's a bug!
-labels: ["bug"]
+name: 🌆 Issue with municipality
+description: A problem with or improvement for an existing CivicBand site
+labels: ["site-issue"]
 type: Bug
 
 body:
-
   - type: markdown
     attributes:
-      value: |
-        Thank you for taking the time to report a bug!
+      Thank you for taking the time to submit an issue with an existing 
+      CivicBand site!
 
-        **Please provide as much information as you have available. The more information we have, the better we will be able to help resolve the issue.**
+      Please title your issue with the name of the municipality, followed by a
+      brief bug desccription.
 
-        ## Bug details
+  - type: input
+    id: subdomain
+    attributes:
+      label: Subdomain
+      description: Subdomain is everything before the .civic.band in the url.
 
   - type: textarea
     id: description
     attributes:
-      label: Describe the bug
-      description: Provide a description of the bug.
+      label: Describe the issue
+      description: Provide a description of the issue.
       value: |
         <!-- A clear and concise description of the problem behavior, including what is happening, and what you expected to happen. -->
     validations:
