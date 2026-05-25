@@ -7,14 +7,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to submit a new municipality! We'll
-        happily take site suggestions on any repo, but you'll get the fastest
-        response by filing against [clerk-fetchers](https://github.com/civicband/clerk-fetchers).
+        Thank you for taking the time to submit a new municipality! We'll happily take site suggestions on any repo, but you'll get the fastest response by filing against [clerk-fetchers](https://github.com/civicband/clerk-fetchers).
 
-        Please title your issue with the name of the municipality, followed by
-        the state or province, followed by the country if not the US. For
-        example, state or province, followed by the country if not the US. 
-        "Alameda, CA" or "Toronto, ON, Canada".
+        Please title your issue with the name of the municipality, followed by the state or province, followed by the country if not the US. "Alameda, CA" or "Toronto, ON, Canada".
   
   - type: input
     id: subdomain
@@ -22,7 +17,7 @@ body:
       label: Subdomain
       description: Subdomain is everything before the .civic.band in the url. Normally {municipality-name}.{state code}, with an optional .{country}. For example, alameda.ca, london.on.canada
     validations:
-      required: true
+      required: false
   
   - type: input
     id: kind
@@ -46,7 +41,7 @@ body:
       label: Latitude,Longitude
       description: We need the latitude and longitude, preferably in the format lat,lon. You can use https://nominatim.openstreetmap.org/ to get this for regional municipal entities
     validations:
-      required: true
+      required: false
   
   - type: input
     id: fetcher
