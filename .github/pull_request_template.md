@@ -9,7 +9,7 @@ New site, or existing?
 
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
 - [ ] I will abide by the CivicBand Code of Conduct
-- [ ] I will abide by the CivicBand Contributor Guide
+- [ ] I will abide by this repository's README and Contributor Guide
 - [ ] This PR was generated or assisted using an AI tool
 <!-- AI assistance is allowed, but must be marked -->
 <!-- update or delete the next line to reflect your usage -->
