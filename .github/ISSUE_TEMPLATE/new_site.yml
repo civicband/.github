@@ -6,13 +6,15 @@ type: Feature
 body:
   - type: markdown
     attributes:
-      Thank you for taking the time to submit a new municipality! We'll happily
-      take site suggestions on any repo, but you'll get the fastest reponse by 
-      filing against [clerk-fetchers](https://github.com/civicband/clerk-fetchers).
+      value: |
+        Thank you for taking the time to submit a new municipality! We'll
+        happily take site suggestions on any repo, but you'll get the fastest
+        response by filing against [clerk-fetchers](https://github.com/civicband/clerk-fetchers).
 
-      Please title your issue with the name of the municipality, followed by the 
-      state or province, followed by the country if not the US. For example, 
-      "Alameda, CA" or "Toronto, ON, Canada".
+        Please title your issue with the name of the municipality, followed by
+        the state or province, followed by the country if not the US. For
+        example, state or province, followed by the country if not the US. 
+        "Alameda, CA" or "Toronto, ON, Canada".
   
   - type: input
     id: subdomain
